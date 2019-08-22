@@ -1,0 +1,40 @@
+<mat-card class="result">
+    <mat-card-content>
+      <h2 class="example-h2">Profile</h2>
+  
+        <form [formGroup]="registerForm" (ngSubmit)="create()">
+            
+            <div class="form-group" >
+            <mat-form-field>
+              <input matInput placeholder=" First name"    formControlName="firstName" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder=" Middle name" formControlName="middleName" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder=" Last name" formControlName="lastName" required>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+                <mat-form-field>
+                  <input matInput placeholder="Enter your email" formControlName="email" required>
+                  <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+          </div>
+                <div class="form-group">
+                        <mat-form-field>
+                          <input matInput placeholder="Enter your password" formControlName="password" required>
+                            </mat-form-field>
+                      </div>
+                      <div class="form-group">
+                            <mat-form-field>
+                      <button mat-flat-button color="primary">Signup</button>
+                          </mat-form-field>
+</div>
+
+
+          </form>
+          </mat-card-content>
+          </mat-card>
+          

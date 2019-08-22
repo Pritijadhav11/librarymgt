@@ -1,0 +1,65 @@
+<!-- <h2>Register</h2> -->
+<div class="container">
+    <div class="col-md-3"></div>
+         <mat-card class="my-card">
+                <mat-toolbar>
+                        <img class="i" src="./assets/img/log1.png">
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span class="center"><h2>Registeration</h2></span>
+                  </mat-toolbar>
+
+        <mat-card-content> 
+
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group">
+        <label for="name"> Name</label>
+        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="text" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+        <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+            <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">email is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="rollNo">Roll no.</label>
+        <input type="text" formControlName="rollNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.rollNo.errors }" />
+        <div *ngIf="submitted && f.rollNo.errors" class="invalid-feedback">
+            <div *ngIf="f.rollNo.errors.required">rollNo is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="gender" formControlName="gender" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" />
+        <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+            <div *ngIf="f.gender.errors.required">Gender is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Register</button>
+
+        <a routerLink="/login" class="btn btn-link">Cancel</a>
+    </div>
+</form>
+ </mat-card-content>
+</mat-card> 
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+
+<div class="col-md-4">
+   <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+   </mat-card-header>
+
+      <mat-card class="my-card">
+         <mat-toolbar>
+               <img class="i" src="./assets/img/log1.png">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="center">LOGIN</span>
+         </mat-toolbar>
+
+
+
+
+         <mat-card-content>
+            <form [formGroup]="signForm" >
+               <div class="form-group">
+                     <mat-form-field class="full-width">
+                  <mat-select placeholder='Login as'>
+                     <mat-option value="option">Student</mat-option>
+                     <mat-option value="option">Librarian</mat-option>
+                </mat-select>
+                </mat-form-field>
+               </div>
+          
+               <div class="form-group">
+               <mat-form-field class="full-width">
+                  <input  matInput name="email" placeholder="username" formControlName="email">
+                  <!-- <div *ngIf = "f.email.errors && f.email.touched" >
+                     <span *ngIf="f.email.errors.email && f.email.touched" class="alert alert-danger">Invalid email address</span>
+                     <span *ngIf="f.email.errors.required && f.email.touched" class="alert alert-danger">Email is required</span>
+   
+                 </div> -->
+               </mat-form-field>
+    </div>
+
+     <div class="form-group">     
+               <mat-form-field class="full-width">
+                  <input  matInput name="password" placeholder="Password" formControlName="password">
+                  <!-- <div *ngIf = "f.password.errors && f.password.touched">
+                     <span *ngIf = "f.password.errors.required && f.password.touched" class="alert alert-danger">Password is required</span>
+   
+                   </div> -->
+               </mat-form-field>
+     </div>
+
+            </form>
+         </mat-card-content>
+         <mat-card-actions>
+            <button mat-raised-button  color="primary" (click)="studentSignin()">LOGIN</button>
+            <!-- <a routerLink="/student/register" class="btn btn-link">Register</a> -->
+         </mat-card-actions>
+      </mat-card>
+         
+                      
+                      
+</div>
+
+    </div>            
+            

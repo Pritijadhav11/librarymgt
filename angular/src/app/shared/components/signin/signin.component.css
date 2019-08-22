@@ -1,0 +1,20 @@
+.form-group{
+    border-radius: 20px;
+}
+.col-md-4{
+    margin-top: 5%;
+    margin-left: 30%;
+}
+.i{
+    height: 50px;
+    width: 50px;
+}
+mat-container{
+background-color: rgb(87, 82, 82);
+}
+.my-card{
+    width:450px;
+}
+body{
+    background-image: url(/assets/img/library.jpg)
+}
